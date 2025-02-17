@@ -2,6 +2,7 @@
 #include <fstream>
 #include <windows.h>
 #include <string>
+#include <limits>
 #include "Employee.h"
 
 void runProcess(const std::string& command)
@@ -68,6 +69,12 @@ void printReportFile(const std::string& filename)
     }
 
     file.close();
+}
+
+void clearInputBuffer()
+{
+    std::cin.clear();
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 }
 
 int main()
