@@ -1,9 +1,12 @@
 #include <iostream>
 #include <fstream>
-#include <windows.h>
 #include <string>
 #include <limits>
+#include <cstring>
 #include "Employee.h"
+
+#define NOMINMAX
+#include <windows.h>
 
 void runProcess(const std::string& command)
 {
